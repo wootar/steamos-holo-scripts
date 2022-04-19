@@ -11,5 +11,7 @@ sudo mkdir /etc/pacman.d || true
 sudo mkdir rootfs || true
 sudo cp base/mirrorlist-steamos /etc/pacman.d
 sudo pacstrap -M -i -G -C base/pacman.conf rootfs base htop neofetch || sudo basestrap -M -i -G -C base/pacman.conf rootfs base htop neofetch || echo "Please install arch install scripts"; exit 1
+sudo cp base/pacman.conf rootfs/etc/pacman.conf
+sudo cp base/mirrorlist-steamos rootfs/etc/pacman.d/mirrorlist-steamos
 echo Done!
 exit 0
